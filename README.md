@@ -1,24 +1,42 @@
-# README
+# <おそうじマニア！>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+<様々なユーザと掃除に役立つ情報を共有できるサイト>
 
-* Ruby version
+### サイトテーマ
 
-* System dependencies
+<掃除に関する情報のシェア>
 
-* Configuration
+### テーマを選んだ理由
 
-* Database creation
+<料理レシピの共有サイトは多いですが、家事の中で料理と同等レベルで重要で生活に密着した掃除に関する情報を共有するサイトがあれば便利なのにと大掃除をする中感じました。大掃除や人を迎えるときはあちこちに手を付けなければならず、対象箇所の掃除法を一つ一つ調べていくのは、私だけでなく多くの人が手間に感じることなのではないでしょうか。なので、効率的な掃除法、便利な掃除グッズなどの情報を共有できるサイトがあれば多くの人の役に立つのではないかと考えてこのテーマに決めました。>
 
-* Database initialization
+### ターゲットユーザ
 
-* How to run the test suite
+<一人暮らしの学生から主婦を中心に、効果的な掃除方法を知りたいと考える人。>
 
-* Services (job queues, cache servers, search engines, etc.)
+### 主な利用シーン
 
-* Deployment instructions
+<掃除に取り掛かるときや、その最中など。また、いいね機能を実装して、ほかのユーザが高く評価した掃除方法が分かるようにし、より効果的で効率的な掃除方法を知ることができます。>
 
-* ...
+## 設計書
+
+<...>
+
+## チャレンジ要素一覧
+
+<https://docs.google.com/spreadsheets/d/1qVJ83IudXd6xEcDK0K3Sw6O7fGRijU1s-Rg1r9dgtBs/edit#gid=0>
+
+## 開発環境
+
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JS ライブラリ：jQuery
+- IDE：Cloud9
+
+## 使用素材
+
+- photoAC 写真のフリー素材サイト URL https://www.photo-ac.com/
+-
