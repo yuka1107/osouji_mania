@@ -46,4 +46,4 @@ https://docs.google.com/spreadsheets/d/1qVJ83IudXd6xEcDK0K3Sw6O7fGRijU1s-Rg1r9dg
 
 - photoAC 写真のフリー素材サイト URL https://www.photo-ac.com/
 - Free Logo Maker URL https://www.designevo.com/logo-maker/
-- フォントフリー URL 
+- フォントフリー URL https://fontfree.me/
