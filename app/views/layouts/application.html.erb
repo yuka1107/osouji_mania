@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <% if user_signed_in? %>
+      <% elsif admin_signed_in? %>
+      <% else %>
+      <% end %>
+    </header>
+    
+    <main>
+      <%= yield %>
+    </main>
+    
   </body>
 </html>
