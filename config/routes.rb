@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
   }
@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   scope module: :public do
     root to: 'homes#top'
     get 'about' => 'homes#about'
+    resources :users, only:[:show, :edit, :update]
+    get 'users/unsubscribe' => 'users#unsubscribe'
+    patch 'users/withdraw' => 'users#withdraw'
   end
 
 end
