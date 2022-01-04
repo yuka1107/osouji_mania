@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row my-5 justify-content-center">
+    <h3 class="font-weight-bold">本当に退会しますか？</h3>
+  </div>
+  <p class="text-center">
+    退会すると会員登録情報や今までの投稿、コメント、いいねが削除され投稿もできなくなります。<br>
+    退会すれば元の状態に戻すことはできません。<br>
+    以上を確認の上、退会する場合は「退会する」をクリックしてください。<br>
+    他投稿記事の閲覧は今まで通り可能なままとなっています。
+  </p>
+  <div class="row my-5 justify-content-center">
+    <div class="col-3">
+      <%= link_to "退会しない", users_path, class: "btn btn-primary m-2" %>
+    </div>
+    <div class="col-3">
+      <%= link_to "退会する", withdraw_users_path, method: :patch, datta: { confirm: "退会しますか？" }, class: "btn btn-danger m-2" %>
+    </div>
+  </div>
+</div>
