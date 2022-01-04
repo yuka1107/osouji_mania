@@ -1,8 +1,7 @@
 <div class="container">
   <h2 class="m-3">会員登録</h2>
 
-  <%= form_with model: @user, url: user_registration_path,local: true do |f %>
-    <%= render "users/users/shared/error_messages", resource: resource %>
+  <%= form_with model: @user, url: user_registration_path,local: true do |f| %>
     <table class="table table-borderless">
       <tbody>
         <tr>
@@ -11,14 +10,14 @@
         </tr>
         <tr>
           <td><%= f.label :email, "メールアドレス" %></td>
-          <td><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "sample@example.com" class: "form-control" %></td>
+          <td><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "sample@example.com", class: "form-control" %></td>
         </tr>
         <tr>
           <td><%= f.label :password, "パスワード(6文字以上)" %></td>
           <td><%= f.password_field :password, autocomplete: "new-password", class: "form-control" %></td>
         </tr>
         <tr>
-          <td><%= f.label :password_confirmation %></td>
+          <td><%= f.label :password_confirmation, "パスワード(確認用)" %></td>
           <td><%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %></td>
         </tr>
       </tbody>

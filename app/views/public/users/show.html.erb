@@ -1,14 +1,55 @@
-<h1>マイページ</h1>
-<div>
-  <h3><%= @user.name %></h3>
-  <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" 
-  
-  <% if @user.id == current_user.id %>
-    <p><%= link_to "プロフィールを編集", edit_user_path(@user) %></p>
-  <% end %>
+<div class="container">
+  <h3 class="m-3"><%= @user.name %>さんのマイページ</h3>
+  <div class="row my-3">
+    <div class="col-2">
+      <h5 class="font-weight-bold">登録情報</h5>
+    </div>
+    <div class="col">
+      <%= link_to "編集する", edit_users_path, class: "btn btn-success" %>
+    </div>
+  </div>
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td>プロフィール画像</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>ユーザーネーム</td>
+        <td><%= @user.name %></td>
+      </tr>
+      <tr>
+        <td>プロフィール</td>
+        <td><%= @user.introduction %></td>
+      </tr>
+      <tr>
+        <td>メールアドレス</td>
+        <td><%= @user.email %></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row my-3">
+    <div class="col-2">
+      <h5 class="font-weight-bold">投稿履歴</h5>
+    </div>
+    <div class="col">
+      <%= "一覧を見る", class: "btn btn-primary" %>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col-2">
+      <h5 class="font-weight-bold">カレンダー</h5>
+    </div>
+    <div class="col">
+      <%= "カレンダーを見る", class: "btn btn-primary" %>
+    </div>
+  </div>
 </div>
 
+
 <div>
-  <p>説明</p>
-  
+  <h3><%= @user.name %></h3>
+  <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+
+
 </div>

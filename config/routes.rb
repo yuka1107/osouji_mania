@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {
     rgistrations: 'users/registrations',
-    sessions: 'users/sessions',
-    destroy: 'users/sessions/destroy'
+    sessions:     'users/sessions',
+    destroy:      'users/sessions/destroy'
   }
 
   namespace :admin do
