@@ -1,26 +1,28 @@
-<h2>Log in</h2>
+<div class="container">
+  <h2 class="m-3">管理者ログイン</h2>
 
-<%= form_with model: @admin, url: admin_session_path, local: true do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+  <%= form_with model: @admin, url: admin_session_path, local: true do |f| %>
+    <div class="row my-3 justify-content-center align-items-center">
+      <div class="col-3">
+        <%= f.label :email, "メールアドレス", class: "form-label" %>
+      </div>
+      <div class="col-6">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+    <div class="row my-3 justify-content-center align-items-center">
+      <div class="col-3">
+        <%= f.label :password, "パスワード" %>
+      </div>
+      <div class="col-6">
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+      </div>
+    </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="row my-3 justify-content-center">
+      <%= f.submit "ログイン", class: "btn btn-primary" %>
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "amins/shared/links" %>
+</div>
