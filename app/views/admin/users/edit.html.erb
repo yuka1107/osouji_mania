@@ -3,6 +3,14 @@
   <%= form_with model @user, url: admin_user_path, local:true do |f| %>
   <div class="row my-3 align-items-center">
     <div class="col-2">
+      <%= f.label "プロフィール画像", class: "form-label" %>
+    </div>
+    <div class="col-3">
+      プロフィール画像ここに
+    </div>
+  </div>
+  <div class="row my-3 align-items-center">
+    <div class="col-2">
       <%= f.label "会員ID", class: "form-label" %>
     </div>
     <div class="col-3">
