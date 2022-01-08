@@ -71,3 +71,5 @@ gem 'devise'
 
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+
+gem 'kaminari','~> 1.2.1'

@@ -1,0 +1,31 @@
+<h2 class="m-5">会員一覧</h2>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>会員!D</th>
+        <th>ユーザーネーム</th>
+        <th>メールアドレス</th>
+        <th>ステータス</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= link_to "#user.name" %></td>
+        <td><%= user.email %></td>
+        <td><% if user.is_active == true %>
+              <p class="text-success">有効</p>
+            <% else %>
+              <p class="text-secondary">退会</p>
+            <% end %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="justify-content-center">
+  <%= paginate @users %>
+</div>

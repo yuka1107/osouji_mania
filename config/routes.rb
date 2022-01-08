@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
   }
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'admin/homes#top'
+    resources :users, except:[:new, :create, :destroy]
   end
 
   scope module: :public do
