@@ -1,0 +1,42 @@
+<div class="container align-items-center">
+  <%= form_with model: @post_article, local:true do |f| %>
+  <div>
+    <div class="row">掃除メソッドについて</div>
+    <div>
+      <%= f.text_field :title, placeholder: "タイトル(50字以内)" class: "form-control" %>
+      <%= f.text_area :caption, placeholder: "キャプション(200字以内)" class: "form-control" %>
+    </div>
+    
+    <!-- 掃除道具登録 -->
+    <div class="row">
+      <div class="form-inline">
+        <h4>必要道具</h4>
+      </div>  
+    </div>
+    
+    <div class="row">
+      <table class="table table-borderless">
+        <thead>
+          <th>道具</th>
+          <th>個数</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><botton type="submit" value="削除" onclick="deleteRow(this)"></botton></td>
+          </tr>
+        </tbody>
+      </table>
+      <botton onclick="addRow('procedure-table')"><%= f.submit "手順を追加" class: "btn btn-sm" %></botton>
+    </div>
+  
+    <!-- 掃除手順登録蘭 -->
+    <div class="row">
+      <h4 class="text-center mx-auto">掃除手順</h4>  
+    </div>
+  
+  </div>
+  <button><%= f.submit "投稿する", class: "btn btn-success" %></button>
+  <% end %>
+</div>  

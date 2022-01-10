@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :users, only:[:show, :edit, :update]
     get 'users/unsubscribe' => 'users#unsubscribe'
     patch 'users/withdraw' => 'users#withdraw'
+    resources :post_articles
   end
 
 end
