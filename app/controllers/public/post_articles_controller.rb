@@ -20,6 +20,7 @@ class PostArticlesController < ApplicationController
 
   def show
     @post_article = PostArticle.find(params[:id])
+    @post_comments = PostComment,new
   end
 
   def edit

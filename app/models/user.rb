@@ -7,6 +7,12 @@ class User < ApplicationRecord
   # 投稿記事
   has_many :post_articles, dependent: :destroy
 
+  # コメント機能
+  has_many :post_comments, dependent: :destroy
+
+  # いいね機能
+  has_many :favorites, dependent: :destroy
+
   # カレンダー機能
   has_many :events, dependent: :destroy
 
