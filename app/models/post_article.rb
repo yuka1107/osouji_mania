@@ -1,3 +1,13 @@
+# post_articles テーブル
+# id         :bigint not null, primary key
+# user_id    :integer
+# image      :string
+# title      :text
+# caption    :text
+# is_active  :boolean
+# created_at :detetime not null
+# updated_at :detetime not null
+
 class PostArticle < ApplicationRecord
   belongs_to :user
   attachment :image

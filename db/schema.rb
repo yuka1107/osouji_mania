@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_11_023502) do
+ActiveRecord::Schema.define(version: 2022_01_11_053708) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -58,6 +58,15 @@ ActiveRecord::Schema.define(version: 2022_01_11_023502) do
     t.integer "post_article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.integer "post_article_id", null: false
+    t.string "image"
+    t.text "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_article_id"], name: "index_steps_on_post_article_id"
   end
 
   create_table "users", force: :cascade do |t|
