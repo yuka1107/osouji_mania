@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h1>お問い合わせ</h1>
+</div>
+
+<%= form_with @inquiry, url: inquiry_thanks_path do |f| %>
+  <table class="table">
+    <thead>
+      <th>名前</th>
+      <th>メールアドレス</th>
+      <th>お問い合わせ内容</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= f.hidden_field :name %></td>
+        <td><%= @inquiry.name %></td>
+      </tr>
+      <tr>
+        <td><%= f.hidden_field :email %></td>
+        <td><%= @inquiry.email %></td>
+      </tr>
+      <tr>
+        <td><%= f.hidden_field :message %></td>
+        <td><%= simple_format(@inquiry.message) %></td>
+      </tr>
+    </tbody>
+  </table>
+  <%= f.submit "送信", class: "btn btn-primary" %>
+<% end %>

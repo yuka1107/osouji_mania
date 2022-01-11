@@ -1,0 +1,31 @@
+<h4 class="m-5"><%= @post_article.title %>の詳細</h4>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= attachment_image_tag @post_article, :image, class: "img-fluid" %>
+    </div>
+    <div class="col">
+      <table class="table table-borderless">
+        <tbody>
+          <tr>
+            <td>タイトル</td>
+            <td><%= @post_article.title %></td>
+          </tr>
+          <tr>
+            <td>説明</td>
+            <td><%= @post_article.capyion %></td>
+          </tr>
+          <tr>
+            <td>公開ステータス</td>
+            <td><%= @post_article.is_active ? "公開中" : "非公開中" %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <div class="row justify-content-center">
+    <%= link_to "編集する", edit_post_article_path(@post_article), class: "btn btn-success" 
+  </div>
+</div>
