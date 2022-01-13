@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # プロフィール画像
+  
+
   # 投稿記事
   has_many :post_articles, dependent: :destroy
 

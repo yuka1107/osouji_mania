@@ -10,7 +10,11 @@
 # updated_at :detetime not null
 
 class PostArticle < ApplicationRecord
+
+  # ユーザーと紐づけ
   belongs_to :user
+
+  # 画像アップロード
   attachment :image
 
   # タグ機能
@@ -20,16 +24,16 @@ class PostArticle < ApplicationRecord
     current_tags = self.tags.pluck(:name) unless self.tags.nill?
     old_tags = current_tags - sent_tags
     new_tags = sent_tags - current_tags
-    
+
     old_tags.each do |old|
       self.post_tags.delete PostTag.find_by(name: old)
     end
-    
+
     new_tags.each do |new|
       new_post_tag = PostTag.find_or_create_by(name: new)
       self.post_tags << new_post_tag
-    end  
-  end  
+    end
+  end
 
   # コメント機能
   has_many :post_comments, dependent: :destroy
