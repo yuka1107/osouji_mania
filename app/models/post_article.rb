@@ -10,7 +10,6 @@
 # updated_at :detetime not null
 
 class PostArticle < ApplicationRecord
-
   # ユーザーと紐づけ
   belongs_to :user
 
@@ -21,17 +20,17 @@ class PostArticle < ApplicationRecord
   has_many :post_tags, dependent: :destroy
   has_many :tags, through: :post_tags
   def save_tag(sent_tags)
-    current_tags = self.tags.pluck(:name) unless self.tags.nill?
+    current_tags = tags.pluck(:name) unless tags.nill?
     old_tags = current_tags - sent_tags
     new_tags = sent_tags - current_tags
 
     old_tags.each do |old|
-      self.post_tags.delete PostTag.find_by(name: old)
+      post_tags.delete PostTag.find_by(name: old)
     end
 
     new_tags.each do |new|
       new_post_tag = PostTag.find_or_create_by(name: new)
-      self.post_tags << new_post_tag
+      post_tags << new_post_tag
     end
   end
 

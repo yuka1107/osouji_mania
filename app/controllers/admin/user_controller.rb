@@ -1,7 +1,7 @@
 class Admin::UserController < ApplicationController
   before_action :authenticate_admin!
 
-  #会員一覧
+  # 会員一覧
   def index
     @users = User.page(params[:page]).reverse_order
   end
@@ -21,7 +21,8 @@ class Admin::UserController < ApplicationController
   end
 
   private
-  #ストロングパラメーター
+
+  # ストロングパラメーター
   def user_params
     params.require(:user).permit(:name, :email, :introduction, :profile_image, :is_active)
   end

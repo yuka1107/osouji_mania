@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # プロフィール画像
-  
 
   # 投稿記事
   has_many :post_articles, dependent: :destroy
@@ -20,7 +19,6 @@ class User < ApplicationRecord
   has_many :events, dependent: :destroy
 
   def active_for_authentication?
-    super && (self.is_active == true)
+    super && (is_active == true)
   end
-
 end

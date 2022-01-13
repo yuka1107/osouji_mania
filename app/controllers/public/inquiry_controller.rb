@@ -1,12 +1,11 @@
 class InquiryController < ApplicationController
-
   # 入力画面
   def index
-    @inquiry = Inquiry,new
+    @inquiry = Inquiry, new
     render :action => 'index'
   end
 
-　# 入力確認
+  　 # 入力確認
   def confirm
     @inquiry = Inquiry.new(params[:inquiry].permit(:name, :email, :message))
     if @inquiry.valid?

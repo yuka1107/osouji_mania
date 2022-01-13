@@ -73,7 +73,7 @@ gem 'devise'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 # ページャ機能
-gem 'kaminari','~> 1.2.1'
+gem 'kaminari', '~> 1.2.1'
 # お問い合わせ機能
 gem 'dotenv-rails'
 # 検索機能
